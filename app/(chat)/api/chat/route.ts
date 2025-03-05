@@ -1,9 +1,9 @@
 import {
-  type Message,
   createDataStreamResponse,
   smoothStream,
   streamText,
 } from 'ai';
+import type {Message} from '@ai-sdk/react'
 
 import {mastra} from '@/src/mastra'
 

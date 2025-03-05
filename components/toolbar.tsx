@@ -1,6 +1,6 @@
 'use client';
-
-import type { ChatRequestOptions, CreateMessage, Message } from 'ai';
+import {Message, CreateMessage} from '@ai-sdk/react'
+import type { ChatRequestOptions } from 'ai';
 import cx from 'classnames';
 import {
   AnimatePresence,
@@ -39,7 +39,7 @@ import {
 } from './icons';
 import { artifactDefinitions, ArtifactKind } from './artifact';
 import { ArtifactToolbarItem } from './create-artifact';
-import { UseChatHelpers } from 'ai/react';
+import { UseChatHelpers } from '@ai-sdk/react';
 
 type ToolProps = {
   description: string;
@@ -56,7 +56,8 @@ type ToolProps = {
   onClick: ({
     appendMessage,
   }: {
-    appendMessage: UseChatHelpers['append'];
+    // TODO: fix type
+    appendMessage: any
   }) => void;
 };
 

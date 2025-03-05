@@ -8,16 +8,17 @@ import {
 
 export const DEFAULT_CHAT_MODEL: string = 'chat-model-small';
 
+// TODO: fix type
 export const myProvider = customProvider({
   languageModels: {
-    'chat-model-small': openai('gpt-4o-mini'),
-    'chat-model-large': openai('gpt-4o'),
+    'chat-model-small': openai('gpt-4o-mini') as any,
+    'chat-model-large': openai('gpt-4o') as any,
     'chat-model-reasoning': wrapLanguageModel({
-      model: fireworks('accounts/fireworks/models/deepseek-r1'),
+      model: fireworks('accounts/fireworks/models/deepseek-r1') as any,
       middleware: extractReasoningMiddleware({ tagName: 'think' }),
     }),
-    'title-model': openai('gpt-4-turbo'),
-    'artifact-model': openai('gpt-4o-mini'),
+    'title-model': openai('gpt-4-turbo') as any,
+    'artifact-model': openai('gpt-4o-mini') as any,
   },
   imageModels: {
     'small-model': openai.image('dall-e-2'),

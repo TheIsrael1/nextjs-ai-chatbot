@@ -1,11 +1,11 @@
 import type {
   CoreAssistantMessage,
   CoreToolMessage,
-  Message,
   TextStreamPart,
   ToolInvocation,
   ToolSet,
 } from 'ai';
+import {Message, CreateMessage} from '@ai-sdk/react'
 import { type ClassValue, clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 

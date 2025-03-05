@@ -3,9 +3,8 @@
 import type {
   Attachment,
   ChatRequestOptions,
-  CreateMessage,
-  Message,
 } from 'ai';
+import {Message, CreateMessage} from '@ai-sdk/react'
 import cx from 'classnames';
 import type React from 'react';
 import {

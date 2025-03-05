@@ -1,9 +1,8 @@
 import type {
   Attachment,
   ChatRequestOptions,
-  CreateMessage,
-  Message,
 } from 'ai';
+import {Message, CreateMessage} from '@ai-sdk/react'
 import { formatDistance } from 'date-fns';
 import { AnimatePresence, motion } from 'framer-motion';
 import {
